@@ -50,11 +50,16 @@ section {
 .card {
   width: 175px;
   font-size: 12px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .card-image {
   width: 80%;
   border-radius: 9px;
+  margin-bottom: 9px;
 }
 
 .card-stats {
@@ -64,4 +69,42 @@ section {
 
 .card-star {
   height: 12px;
+}
+
+section {
+  padding: 20px;
+}
+
+.cards-list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.card--title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card--price {
+  margin-top: auto;
+}
+
+p {
+  display: flex;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 42px;
+}
+
+.card-badge {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: white;
+  padding: 3px 6px;
+  font-weight: bold;
+  border-radius: 5px;
+
 }
