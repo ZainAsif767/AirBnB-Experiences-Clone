@@ -1,5 +1,5 @@
 import Navbar from './components/Navbar';
-// import Hero from './components/Hero'
+import Hero from './components/Hero'
 import Card from './components/Card';
 import data from './Data';
 
@@ -12,19 +12,23 @@ export default function App() {
     return (
       <Card
         key={item.id}
-        img={item.coverImg}
-        rating={item.stats.rating}
-        reviewCount={item.stats.reviewCount}
-        location={item.location}
-        title={item.title}
-        price={item.price}
-        openSpots={item.openSpots}
+        // img={item.coverImg}
+        // rating={item.stats.rating}
+        // reviewCount={item.stats.reviewCount}
+        // location={item.location}
+        // title={item.title}
+        // price={item.price}
+        // openSpots={item.openSpots}
+        // below is another approach of passing props
+        // which is a bit better way..
+        item={item}
       />
     )
   })
   return (
     <div>
       <Navbar />
+      <Hero />
       <section className='cards-list'>
         {cards}
       </section>
@@ -32,4 +36,3 @@ export default function App() {
     </div>
   )
 }
-{/* <Hero /> */ }
